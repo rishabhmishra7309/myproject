@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>
+            Tudo List
+        </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <div class="container">
+        <h1>Simple DOM Todo App</h1>
+        <input type="text" id="inputfield">
+        <button class="btn">Click Me</button>
+        <div class="todoListsElem">
+        </div>
+    </div>
+    <script>
+        let inputElem=document.getElementById("inputfield");
+        let clickBtn=document.querySelector(".btn");
+       let todoElem=document.querySelector(".todoListsElem");
+       const addTodo = () =>{
+            console.log(inputElem.value);
+          let pElem=document.createElement("p");
+          pElem.textContent=inputElem.value;
+          todoElem.append(pElem);
+          inputElem.value=" ";
+        };
+        clickBtn.addEventListener('click',()=>{
+            addTodo();
+        });
+        todoElem.addEventListener('click',(event) =>{
+          let currElem=event.target;
+          currElem.remove(); 
+        });
+    </script>
+    </body>
+</html>
+
