@@ -1,0 +1,46 @@
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    height: 100px;
+    width: 300px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    border: 2px solid white;
+    border-radius: 20px;
+    /* box-shadow:0px 15px 4px rgb(0, 255, 200); */
+}
+.stand{
+    height: 10px;
+    width: 140px;
+    background-color: rgb(185, 248, 10);
+    border-radius: 10px;
+    position: absolute;
+    top: 112px;
+
+}
+.blur{
+    height: 4px;
+    width: 280px;
+    background-color: black;
+    position: absolute;
+    top: 164px;
+    box-shadow:0px -41px 14px yellow;
+}
+/* .clockHolder{
+    height: 10px;
+    width: 140px;
+    background-color: yellow;
+} */
+#clock{
+    color: blueviolet;
+    font-size:xx-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+}
