@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            height: 400px;
+            width: 280px;
+            border-radius: 20px;
+            background-color: rgb(0, 102, 128);
+            box-shadow: 0px 0px 1px black;
+        }
+        .container textarea{
+            height: 70px;
+            width: 95%;
+            border-radius: 10px;
+            margin: 5px;
+            resize: none;
+            text-align: right;
+            font-size: 21px;
+            font-family: "verdana";
+            background: rgb(37, 49, 14);
+            outline: none;
+            color: white;
+            line-height: 50px;
+        }
+        .container .row button{
+            height: 50px;
+            width: 50px;
+            margin: 5px 8px;
+            cursor: pointer;
+            font-size: 17px;
+            background-color: transparent;
+            border: none;
+            color: white;
+            box-shadow: 0px 0px 10px black;
+        }
+        .container .row button:hover{
+            background-color: orangered;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+       <textarea name="calc" id="calc" readonly></textarea>
+    
+    <div class="row">
+        <button value="C" onclick="calc.value ='' ">C</button>
+        <button value="LD" onclick="calc.value = calc.value.toString().slice(0,-1)">LD</button>
+        <button value="%" onclick="calc.value +='%' ">%</button>
+        <button value="/" onclick="calc.value +='/' ">/</button>
+    </div>
+    <div class="row">
+        <button value="7" onclick="calc.value +='7' ">7</button>
+        <button value="8" onclick="calc.value +='8' ">8</button>
+        <button value="9" onclick="calc.value +='9' ">9</button>
+        <button value="+" onclick="calc.value +='+' ">+</button>
+    </div>
+    <div class="row">
+        <button value="4" onclick="calc.value +='4' ">4</button>
+        <button value="5" onclick="calc.value += '5' ">5</button>
+        <button value="6" onclick="calc.value +='6' ">6</button>
+        <button value="-" onclick="calc.value +='-' ">-</button>
+    </div>
+    <div class="row">
+        <button value="1" onclick="calc.value +='1' ">1</button>
+        <button value="2" onclick="calc.value += '2' ">2</button>
+        <button value="3" onclick="calc.value +='3' ">3</button>
+        <button value="*" onclick="calc.value +='*' ">*</button>
+    </div>
+    <div class="row">
+        <button value="0" onclick="calc.value +='0' ">0</button>
+        <button value="." onclick="calc.value +='.' ">.</button>
+        <button value="=" onclick="calc.value= eval(calc.value) " style="width:120px">=</button>
+    </div>
+</div>
+    <script>
+
+    </script>
+</body>
+</html>
